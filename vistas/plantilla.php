@@ -116,6 +116,7 @@
           $_GET["ruta"] == "reportes" ||
           $_GET["ruta"] == "inscripciones" ||
           $_GET["ruta"] == "Usuarios" ||
+          $_GET["ruta"] == "notificaciones" ||
           $_GET["ruta"] == "Salir"
 
         ) {
@@ -144,6 +145,7 @@
   <script src="vistas/js/plantilla.js"></script>
   <script src="vistas/js/usuarios.js"></script>
   <script src="vistas/js/sedes.js"></script>
+  <script src="vistas/js/notificaciones.js"></script>
   <script src="vistas/js/styles.css"></script>
 
 
