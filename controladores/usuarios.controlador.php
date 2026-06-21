@@ -25,6 +25,10 @@ class ControladorUsuarios{
                     if ($respuesta["estado"]== "activo"){
                         if ($respuesta["password"] == $passEncriptado && $respuesta["documento_id"]== $documento){
                             $_SESSION["iniciarSesion"] = "ok";
+                            $_SESSION["id"] = $respuesta["id"];
+                            $_SESSION["nombres"] = $respuesta["nombres"];
+                            $_SESSION["apellidos"] = $respuesta["apellidos"];
+                            $_SESSION["rol"] = $respuesta["rol"];
                             echo "<script>window.location = 'inicio';</script>";
                         } else{
                         // var_dump($respuesta);

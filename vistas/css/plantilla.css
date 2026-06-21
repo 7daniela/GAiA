@@ -176,3 +176,118 @@ MODALES DE APOYOS - ESTILO SECONDARY
     color: #ffffff;
     opacity: 1;
 }
+
+/*=============================================
+VISTA HISTORIAL DE CONVOCATORIAS
+=============================================*/
+#vista-historial-convocatorias .historial-filtros {
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+}
+
+#vista-historial-convocatorias .historial-timeline {
+    position: relative;
+    padding-left: 2.25rem;
+}
+
+#vista-historial-convocatorias .historial-timeline::before {
+    content: "";
+    position: absolute;
+    top: 0.5rem;
+    bottom: 0.5rem;
+    left: 0.9rem;
+    width: 2px;
+    background: rgba(25, 135, 84, 0.75);
+}
+
+#vista-historial-convocatorias .historial-card {
+    position: relative;
+    margin-bottom: 1.25rem;
+}
+
+#vista-historial-convocatorias .historial-card-marker {
+    position: absolute;
+    left: -2.1rem;
+    top: 1.2rem;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    background: #198754;
+    border: 3px solid #343a40;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+#vista-historial-convocatorias .historial-card-content {
+    padding: 1.25rem;
+    background: #343a40;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-left: 4px solid #198754;
+    border-radius: 8px;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+}
+
+#vista-historial-convocatorias .historial-card-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+#vista-historial-convocatorias .historial-id {
+    display: block;
+    margin-bottom: 0.2rem;
+    color: #9be7b2;
+    font-weight: 700;
+}
+
+#vista-historial-convocatorias .historial-card h4 {
+    margin: 0;
+    color: #ffffff;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+#vista-historial-convocatorias .historial-metricas {
+    margin-top: 0.35rem;
+}
+
+#vista-historial-convocatorias .historial-metricas span,
+#vista-historial-convocatorias .historial-cierre span {
+    display: block;
+    margin-bottom: 0.2rem;
+    color: rgba(255, 255, 255, 0.68);
+    font-size: 0.9rem;
+}
+
+#vista-historial-convocatorias .historial-metricas strong,
+#vista-historial-convocatorias .historial-cierre strong {
+    color: #ffffff;
+    font-size: 1.05rem;
+}
+
+#vista-historial-convocatorias .historial-cierre {
+    padding-top: 0.85rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+@media (max-width: 575.98px) {
+    #vista-historial-convocatorias .historial-timeline {
+        padding-left: 0;
+    }
+
+    #vista-historial-convocatorias .historial-timeline::before,
+    #vista-historial-convocatorias .historial-card-marker {
+        display: none;
+    }
+
+    #vista-historial-convocatorias .historial-card-header {
+        flex-direction: column;
+    }
+}

@@ -13,7 +13,12 @@
           <img src="vistas/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">Germán Ramírez</a>
+          <a href="#" class="d-block">
+            <?php
+              $nombreSesion = trim(($_SESSION["nombres"] ?? "") . " " . ($_SESSION["apellidos"] ?? ""));
+              echo $nombreSesion !== "" ? htmlspecialchars($nombreSesion, ENT_QUOTES, "UTF-8") : "Usuario";
+            ?>
+          </a>
         </div>
       </div>
 
@@ -130,6 +135,17 @@
               </p>
             </a>
           </li>          
+
+          <?php if (class_exists("ControladorHistorialConvocatorias") && ControladorHistorialConvocatorias::ctrUsuarioPuedeVerHistorial()): ?>
+          <li class="nav-item">
+            <a href="historial-convocatorias" class="nav-link">
+              <i class="fas fa-history nav-icon"></i>
+              <p>
+                Historial de convocatorias
+              </p>
+            </a>
+          </li>
+          <?php endif; ?>
 
         </ul>
       </nav>
